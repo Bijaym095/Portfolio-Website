@@ -1,8 +1,9 @@
 import { Menu } from "lucide-react";
+import Link from "next/link";
+
+import { buttonVariants } from "../ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import MainNav from "./main-nav";
-import { buttonVariants } from "../ui/button";
-import Link from "next/link";
 
 function MainHeader() {
   const navMenu = ["Home", "About", "Services", "Resume", "Projects", "Blogs"];
@@ -15,7 +16,7 @@ function MainHeader() {
         </span>
 
         <MainNav menu={navMenu} className="max-md:hidden" />
-
+    
         <div className="flex items-center gap-4">
           <Link href="#" className={buttonVariants({className: "max-sm:hidden"})}>Contact Us</Link>
 
