@@ -1,7 +1,9 @@
+import Hero from "@/components/layouts/home-hero";
+
 function Home() {
   return (
     <>
-      <h1>Hello World</h1>
+      <Hero />
     </>
   );
 }
