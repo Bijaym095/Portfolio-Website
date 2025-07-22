@@ -24,6 +24,25 @@ function SectionWrapper({
   );
 }
 
+function SectionHeader({
+  className,
+  ...props
+}: React.ComponentProps<"header">) {
+  return <header {...props} className={cn("mb-8 2xl:mb-12", className)} />;
+}
+
+function SectionTitle({ className, ...props }: React.ComponentProps<"h2">) {
+  return (
+    <h2
+      {...props}
+      className={cn(
+        "mb-2 2xl:mb-4 font-poppins font-bold text-[1.5rem] lg:text-[2.25rem] 2xl:text-[2.625rem] leading-tight [&_span]:text-primary",
+        className
+      )}
+    />
+  );
+}
+
 function SectionSubtitle({ className, ...props }: SectionSubtitleProps) {
   return (
     <small
@@ -36,4 +55,4 @@ function SectionSubtitle({ className, ...props }: SectionSubtitleProps) {
   );
 }
 
-export { SectionSubtitle, SectionWrapper };
+export { SectionTitle, SectionSubtitle, SectionHeader, SectionWrapper };
