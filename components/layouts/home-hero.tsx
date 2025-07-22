@@ -9,7 +9,7 @@ function Hero() {
   return (
     <SectionWrapper>
       <TwoColLayout wrapReverse={true}>
-        <Column className="lg:w-[45%]">
+        <Column className="lg:w-[45%]" data-aos="fade-right">
           <small className="block mb-2 text-[0.9375rem] capitalize tracking-wide text-primary font-medium">
             Transforming ideas into impactful web experiences
           </small>
@@ -34,7 +34,7 @@ function Hero() {
             </Link>
           </div>
         </Column>
-        <Column className="lg:w-[55%]">
+        <Column className="lg:w-[55%]" data-aos="fade-left">
           <div className="max-w-[450px] mx-auto [&_img]:w-full">
             <Image
               src="/images/developer-working-img.png"

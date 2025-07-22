@@ -1,4 +1,8 @@
-import { SectionHeader, SectionTitle, SectionWrapper } from "../ui/section-wrapper";
+import {
+  SectionHeader,
+  SectionTitle,
+  SectionWrapper,
+} from "../ui/section-wrapper";
 import TimelineColumn from "../ui/timeline-column";
 import { Column, TwoColLayout } from "../ui/two-col-block";
 
@@ -42,25 +46,18 @@ const TIMELINE_INFO = {
 function EducationWorkExperience() {
   return (
     <SectionWrapper className="lg:max-w-[70.625rem]">
-      <SectionHeader className="text-center">
+      <SectionHeader className="text-center" data-aos="fade-down">
         <SectionTitle>
           My <span>Education</span> & <span>Work Experience</span>
         </SectionTitle>
       </SectionHeader>
 
-      <TwoColLayout className="items-start">
-        <Column className="lg:w-[50%]">
-          <TimelineColumn
-            title="Education"
-            items={TIMELINE_INFO.education}
-          />
-        </Column>
-        <Column className="lg:w-[50%]">
-          <TimelineColumn
-            title="Work Experience"
-            items={TIMELINE_INFO.experience}
-          />
-        </Column>
+      <TwoColLayout className="items-start" data-aos="fade-up">
+        <TimelineColumn title="Education" items={TIMELINE_INFO.education}  />
+        <TimelineColumn
+          title="Work Experience"
+          items={TIMELINE_INFO.experience}
+        />
       </TwoColLayout>
     </SectionWrapper>
   );

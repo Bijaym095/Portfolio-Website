@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Column } from "./two-col-block";
+import { cn } from "@/lib/utils";
 
 interface TimelineItem {
   institution?: string;
@@ -10,14 +11,20 @@ interface TimelineItem {
   period: string;
 }
 
-interface TimelineColumnProps {
+interface TimelineColumnProps extends React.ComponentProps<"div"> {
   title: string;
   items: TimelineItem[];
+  className?: string;
 }
 
-function TimelineColumn({ title, items }: TimelineColumnProps) {
+function TimelineColumn({
+  title,
+  items,
+  className,
+  ...props
+}: TimelineColumnProps) {
   return (
-    <Column>
+    <Column className={cn(className)} {...props}>
       <strong className="block mb-4 2xl:mb-6 pb-2 2xl:pb-4 font-semibold text-[1.25rem] 2xl:text-[1.5rem] leading-tight text-primary border-b border-black/20">
         {title}
       </strong>

@@ -43,7 +43,7 @@ function Services() {
       className="py-12 lg:py-16 xl:py-20 2xl:py-[6.25rem] bg-secondary rounded-4xl lg:rounded-[5rem]"
     >
       <div className="container">
-        <SectionHeader className="text-white/80 text-center">
+        <SectionHeader className="text-white/80 text-center" data-aos="fade-down">
           <SectionTitle className="text-white">My <span>Services</span></SectionTitle>
           <p>
             I design and build clean, responsive, and user-friendly interfaces
@@ -54,7 +54,7 @@ function Services() {
         <div className="max-w-[75rem] mx-auto">
           <div className="flex flex-wrap justify-center gap-y-6 -mx-4">
             {SERVICES.map(({ title, description, thumbnail }, index) => (
-              <div className="w-full sm:w-1/2 lg:w-1/3 px-4" key={index}>
+              <div className="w-full sm:w-1/2 lg:w-1/3 px-4" key={index} data-aos="flip-left">
                 <Card className="group h-full p-4 md:p-6 transition-all duration-300 border-0 max-sm:max-w-[400px] max-sm:mx-auto hover:text-white hover:bg-primary">
                   <figure className="mb-4 rounded-2xl overflow-hidden">
                     <Image
