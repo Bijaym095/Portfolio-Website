@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Dancing_Script, Manrope, Poppins, Sora } from "next/font/google";
+import { Dancing_Script, Poppins } from "next/font/google";
 import "./globals.css";
 
 const poppins = Poppins({

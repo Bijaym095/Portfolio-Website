@@ -5,7 +5,6 @@ interface SectionWrapperProps extends React.ComponentProps<"div"> {
   asContainer?: boolean;
 }
 
-interface SectionSubtitleProps extends React.ComponentProps<"span"> {}
 
 function SectionWrapper({
   asContainer = true,
@@ -43,7 +42,7 @@ function SectionTitle({ className, ...props }: React.ComponentProps<"h2">) {
   );
 }
 
-function SectionSubtitle({ className, ...props }: SectionSubtitleProps) {
+function SectionSubtitle({ className, ...props }: React.ComponentProps<"small">) {
   return (
     <small
       {...props}
