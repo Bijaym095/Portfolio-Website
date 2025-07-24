@@ -1,5 +1,4 @@
 import { cn } from "@/lib/utils";
-import Link from "next/link";
 import React from "react";
 
 import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from "../ui/navigation-menu";
@@ -10,6 +9,31 @@ interface NavMenuProps extends React.ComponentProps<"div"> {
 }
 
 function MainNav({ menu, menuClass, ...props }: NavMenuProps) {
+  const handleScrollToView = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const targetId = e.currentTarget.getAttribute("href");
+    if (!targetId) return;
+
+    const scrollToTarget = () => {
+      const header = document.querySelector(".site-header");
+      const headerHeight = header?.clientHeight || 0;
+      console.log("headerHeight:", headerHeight);
+
+      const targetElement = document.querySelector(targetId);
+      if (!targetElement) return;
+
+      const targetPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition = targetPosition + window.pageYOffset - headerHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    };
+
+    setTimeout(scrollToTarget, 0);
+  };
+
   return (
     <div {...props}>
       <NavigationMenu>
@@ -17,12 +41,13 @@ function MainNav({ menu, menuClass, ...props }: NavMenuProps) {
           {menu.map((menu, index) => (
             <React.Fragment key={index}>
               <NavigationMenuItem>
-                <Link
-                  href={`#${menu}`}
+                <a
+                  onClick={handleScrollToView}
+                  href={`#${menu.toLowerCase()}`}
                   className="text-[1rem] leading-snug text-white transition-all duration-300 hover:text-primary"
                 >
                   {menu}
-                </Link>
+                </a>
               </NavigationMenuItem>
             </React.Fragment>
           ))}

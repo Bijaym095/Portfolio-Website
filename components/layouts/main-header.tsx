@@ -6,10 +6,10 @@ import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import MainNav from "./main-nav";
 
 function MainHeader() {
-  const navMenu = ["Home", "About", "Services", "Resume", "Projects", "Blogs"];
+  const navMenu = ["About", "Services", "Experience", "Projects"];
 
   return (
-    <header className="sticky top-0 z-[999] py-4 bg-secondary">
+    <header className="site-header sticky top-0 z-[999] py-4 bg-secondary">
       <div className="container flex justify-between items-center gap-x-10 backdrop-blur-lg rounded-full">
         <span className="flex-none font-dancing-script text-[1.5rem] leading-none text-white">
           Bijay Magar

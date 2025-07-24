@@ -7,13 +7,13 @@ import { Column, TwoColLayout } from "../ui/two-col-block";
 
 function Hero() {
   return (
-    <SectionWrapper>
+    <SectionWrapper id="about">
       <TwoColLayout wrapReverse={true}>
         <Column className="lg:w-[45%]" data-aos="fade-right">
           <small className="block mb-2 text-[0.9375rem] capitalize tracking-wide text-primary font-medium">
             Transforming ideas into impactful web experiences
           </small>
-          <h1 className="mb-2 2xl:mb-4 font-bold font-sora text-[1.5rem] 2xl:text-[2.25rem] leading-tight">
+          <h1 className="mb-2 2xl:mb-4 font-bold font-sora text-[1.5rem] 2xl:text-[2.25rem] leading-tight text-black">
             Hi, I'm Bijay Magar — Web Developer & UI Craftsman
           </h1>
           <p>
