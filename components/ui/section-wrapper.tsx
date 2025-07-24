@@ -36,7 +36,7 @@ function SectionTitle({ className, ...props }: React.ComponentProps<"h2">) {
     <h2
       {...props}
       className={cn(
-        "mb-2 2xl:mb-4 font-poppins font-bold text-[1.5rem] lg:text-[2.25rem] 2xl:text-[2.625rem] leading-tight [&_span]:text-primary",
+        "mb-2 2xl:mb-4 font-poppins font-bold text-[1.5rem] lg:text-[2.25rem] 2xl:text-[2.625rem] leading-tight text-black [&_span]:text-primary",
         className
       )}
     />

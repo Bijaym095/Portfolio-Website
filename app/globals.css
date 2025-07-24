@@ -43,10 +43,17 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
+@theme {
+  --breakpoint-sm: 36rem;
+  --breakpoint-lg: 62rem;
+  --breakpoint-xl: 75rem;
+  --breakpoint-2xl: 82rem;
+}
+
 :root {
   --radius: 0.625rem;
   --background: oklch(97.614% 0.00011 271.152);
-  --foreground: oklch(21.779% 0.00002 271.152);
+  --foreground: oklch(21.779% 0.00002 271.152 / 0.8);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
