@@ -1,3 +1,4 @@
+import Contact from "@/components/layouts/home-contact";
 import EducationWorkExperience from "@/components/layouts/home-education-work-experience";
 import Hero from "@/components/layouts/home-hero";
 import Projects from "@/components/layouts/home-projects";
@@ -10,6 +11,7 @@ function Home() {
       <Services />
       <EducationWorkExperience />
       <Projects/>
+      <Contact />
     </>
   );
 }
