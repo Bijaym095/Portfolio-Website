@@ -24,7 +24,7 @@ function MainHeader() {
             <SheetTrigger>
               <Menu className="md:hidden text-white" />
             </SheetTrigger>
-            <SheetContent className="py-14 px-6 bg-white/40 backdrop-blur-lg border-0">
+            <SheetContent className="z-[999] py-14 px-6 bg-black/40 backdrop-blur-lg border-0 [&>button]:text-white">
               <MainNav menu={navMenu} menuClass="flex flex-col gap-y-4" />
               <div className="mt-6">
                 <Link href="#" className={buttonVariants({className: "sm:hidden"})}>Contact Us</Link>

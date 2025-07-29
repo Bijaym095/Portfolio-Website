@@ -13,7 +13,7 @@ function MainLayout({ children }: { children: React.ReactNode }) {
   }, []);
 
   return (
-    <div className="site-wrapper min-h-screen flex flex-col">
+    <div className="site-wrapper min-h-screen flex flex-col overflow-x-hidden">
       <MainHeader />
       <main className="grow">{children}</main>
     </div>
